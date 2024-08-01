@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 400;
+  background-color: #161722;
+  min-height: 100dvh;
+  position: relative;
+  color: #fafafa;
+  letter-spacing: 1px;
+}
+.header {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-size: cover;
+  min-height: 40vh;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: -20rem;
+}
+.main__section {
+  width: 54rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #e4e5f1;
+  padding-bottom: 4rem;
+}
+.heading__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.primary__heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+}
+
+.moon__icon {
+  display: none;
+}
+
+.input__box {
+  display: flex;
+  align-items: center;
+  background-color: #25273d;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+
+.todo__input {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: #fafafa;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 1rem;
+  font-size: 1.8rem;
+  width: 100%;
+  letter-spacing: -0.025rem;
+}
+
+.todo__list-box {
+  background-color: #25273d;
+  box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+}
+.todo__text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.todo__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border-bottom: 1px solid #777a92;
+}
+
+.check__icon,
+.border {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid #393a4b;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.border {
+  background-color: transparent;
+}
+.checked__icon {
+  padding: 0.3rem;
+  background-image: url(../images/icon-check.svg),
+    linear-gradient(to right bottom, #57ddff, #c058f3);
+  background-size: cover;
+}
+
+.todo__text {
+  font-size: 1.8rem;
+  color: #c8cbe7;
+  letter-spacing: -0.025rem;
+}
+
+.checked__text {
+  text-decoration: line-through;
+  color: #4d5067 !important;
+}
+
+.remove__icon {
+  margin-left: auto;
+  color: #000;
+}
+.summary__box {
+  color: #5b5e7e;
+  background-color: #25273d;
+}
+
+.summary__boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.left__states {
+  font-size: 1.4rem;
+  letter-spacing: -0.0194rem;
+}
+
+.todo__states {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.all__states,
+.active__states,
+.completed__states,
+.clear__completed {
+  transition: all 0.3s;
+  font-size: 1.4rem;
+  letter-spacing: -0.0194rem;
+  font-weight: 700;
+}
+
+.active__states:hover,
+.completed__states:hover,
+.all__states:hover,
+.clear__completed:hover {
+  color: #e4e5f1;
+}
+
+.clicked__states {
+  color: #3a7bfd;
+}
+.clicked__states:hover {
+  color: #3a7bfd;
+}
+
+/* UTILITIES */
+body,
+.header,
+.input__box,
+.todo__input,
+.todo__list-box,
+.todo__text,
+.todo__list,
+.todo__text-box {
+  transition: all 0.4s;
+}
+
+.all__states,
+.active__states,
+.completed__states,
+.clear__completed,
+.remove__icon,
+.check__icon,
+.moon__icon,
+.light__icon {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 31.25em) {
+  .main__section {
+    width: 100vw;
+    padding: 0 2rem;
+  }
+
+  .summary__boxes {
+    position: relative;
+  }
+
+  .todo__states {
+    position: absolute;
+    bottom: -8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    width: 100%;
+    justify-content: center;
+    padding: 2rem;
+    gap: 4rem;
+  }
+}
+
+.hidden {
+  display: none;
+}

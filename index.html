@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Todo app</title>
+    <script src="src/index.js" defer></script>
+  </head>
+  <body>
+    <header class="header"></header>
+    <main class="main">
+      <section class="main__section">
+        <div class="heading__box">
+          <h1 class="primary__heading">Todo</h1>
+          <div class="icon__box">
+            <img
+              src="images/icon-sun.svg"
+              alt="light mode icon"
+              class="light__icon"
+            />
+            <img
+              src="images/icon-moon.svg"
+              alt="dark mode icon"
+              class="moon__icon"
+            />
+          </div>
+        </div>
+        <div class="input__box">
+          <div class="border"></div>
+          <input
+            type="text"
+            class="todo__input"
+            name="create"
+            placeholder="Create a new todo..."
+          />
+        </div>
+        <div class="todo__list-box">
+          <div class="todo__text-box">
+            <!-- <div class="todo__list">
+              <div class="check__icon"></div>
+              <p class="todo__text">Complete JavaScript course</p>
+              <img
+                src="images/icon-cross.svg"
+                alt="add icon"
+                class="remove__icon"
+              />
+            </div>
+            <div class="todo__list">
+              <div class="check__icon"></div>
+              <p class="todo__text">Complete JavaScript course</p>
+              <img
+                src="images/icon-cross.svg"
+                alt="add icon"
+                class="remove__icon"
+              />
+            </div>
+            <div class="todo__list">
+              <div class="check__icon"></div>
+              <p class="todo__text">Complete JavaScript course</p>
+              <img
+                src="images/icon-cross.svg"
+                alt="add icon"
+                class="remove__icon"
+              />
+            </div> -->
+          </div>
+          <div class="summary__boxes summary__box">
+            <p class="left__states">
+              <span class="items__left--num">0</span> items left
+            </p>
+            <div class="todo__states summary__box">
+              <p class="all__states states clicked__states">All</p>
+              <p class="active__states states">Active</p>
+              <p class="completed__states states">Completed</p>
+            </div>
+            <p class="clear__completed">Clear Completed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
